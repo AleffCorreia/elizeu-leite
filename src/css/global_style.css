@@ -1,0 +1,219 @@
+@font-face {
+  font-family: "Montserrat";
+  src:  url('../assets/fonts/Montserrat-Regular.ttf'),
+        url('../assets/fonts/Montserrat-Bold.ttf');
+}
+
+:root {
+  --logo-theme-color: #002c45;
+  --grey-theme-color: #212529;
+  --text-theme-triade1: #450709;
+  --blue-theme-color: #0c79cf;
+}
+
+*,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+.spacer {
+  flex: 1.1 auto;
+}
+
+.navbar {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+#sub-logo {
+  font-size: 0.8rem;
+  position: relative;
+  top: 15px;
+  left: -86px;
+  color: #fff;
+
+  border-bottom: 1px solid var(--logo-theme-color);
+}
+
+.nav-link {
+  color: var(--logo-theme-color);
+  font-weight: 600;
+}
+.nav-link:hover {
+  color: var(--blue-theme-color) !important;
+  font-weight: 700;
+}
+
+#banner-topo {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.slide-box {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#slide1 {
+  background: url("../assets/images/right-4703922_1920.jpg") no-repeat center
+    center;
+  background-size: cover;
+  background-attachment: fixed;
+  
+}
+#slide1 .wrapper-content {
+  width: 70%;
+  text-align: center;
+}
+
+#slide2 {
+  height: 100vh;
+  background: url("../assets/images/pexels-snapwire-618613.jpg") no-repeat top
+    center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+#slide3 {
+  height: 100vh;
+  background: url("../assets/images/pexels-sora-shimazaki-5668882.jpg")
+    no-repeat bottom center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#service h2 {
+  padding: 15px 0px 15px 12px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  white-space: nowrap;
+  display: flex;
+  justify-content: flex-start;
+}
+#service h2::before, #about-us h3::before {
+  position: absolute;
+  content: "";
+  width: 4%;
+  height: 3px;
+  background: var(--blue-theme-color);
+  margin-top: 25px;
+}
+
+#service h2::after, #about-us h3::after {
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 5px;
+  background: #fff;
+  animation-name: LINE-MOVE;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  margin-top: 25px;
+}
+
+#about-us h3{
+  padding: 15px 0px 15px 12px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  white-space: nowrap;
+  display: flex;
+  justify-content: flex-start;
+}
+
+#prev-contact{
+  background-color: var(--blue-theme-color);
+}
+
+#prev-contact h4{
+  padding: 15px 0px 15px 12px;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  white-space: nowrap;
+  display: flex;
+  justify-content: flex-start;
+}
+#prev-contact h4::before{
+  position: absolute;
+  content: "";
+  width: 4%;
+  height: 3px;
+  background: #fff;
+  margin-top: 25px;
+}
+
+#prev-contact h4::after{
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 5px;
+  background: var(--blue-theme-color);
+  animation-name: LINE-MOVE;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  margin-top: 25px;
+}
+
+#email-title{
+  font-family: "Montserrat";
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+@keyframes LINE-MOVE {
+  0% {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(95px);
+  }
+}
+
+/*#service h2::after {
+  content: "";
+  width: 50px;
+  height: 5px;
+  margin-top: 5px;
+  margin-left: 10px;
+  background: var(--blue-theme-color);
+}
+#service h2::before {
+  content: "";
+  width: 50px;
+  height: 5px;
+  margin-top: 5px;
+  margin-right: 10px;
+  background: var(--blue-theme-color);
+}*/
+
+.card {
+  padding: 0px 10px;
+}
+
+.card-separator {
+  border-bottom: 1px dotted var(--blue-theme-color);
+}
+
+.card:hover {
+  background: var(--blue-theme-color);
+  color: #fff;
+}
+
+.card:hover .img-fluid {
+  -webkit-filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);
+}
+
+.card:hover .card-separator {
+  border-bottom: 1px dotted #fff;
+}

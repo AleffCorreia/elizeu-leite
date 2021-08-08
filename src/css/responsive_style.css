@@ -1,0 +1,37 @@
+@media (max-width: 575.98px) {
+  #slide1 .wrapper-content {
+    width: 100%;
+  }
+  #service h2::before {
+    width: 15%;
+   
+  }
+  #about-us h3::before {
+    width: 25%;
+   
+  }
+
+  #prev-contact h4::before {
+    width: 35%;
+   
+  }
+  .about-icons{
+    display: none;
+  }
+  
+
+  
+  
+}
+
+@media (max-width: 767.98px) {
+  
+  .about-icons{
+    display: none;
+  }
+  
+}
+
+@media (max-width: 991.98px) {
+  
+}
