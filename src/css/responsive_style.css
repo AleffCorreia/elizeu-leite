@@ -4,34 +4,39 @@
   }
   #service h2::before {
     width: 15%;
-   
   }
   #about-us h3::before {
     width: 25%;
-   
   }
 
   #prev-contact h4::before {
     width: 35%;
-   
   }
-  .about-icons{
+  .about-icons {
     display: none;
   }
-  
 
-  
+  #team {
+    width: 320px;
+  }
+
+  #responsive-post{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 15px 0px ;
+  }
+
+
+
   
 }
 
 @media (max-width: 767.98px) {
-  
-  .about-icons{
+  .about-icons {
     display: none;
   }
-  
 }
 
 @media (max-width: 991.98px) {
-  
 }

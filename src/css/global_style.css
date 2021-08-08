@@ -7,7 +7,7 @@
 :root {
   --logo-theme-color: #002c45;
   --grey-theme-color: #212529;
-  --text-theme-triade1: #450709;
+  --brown-theme-triade1: #450709;
   --blue-theme-color: #0c79cf;
 }
 
@@ -86,7 +86,7 @@ body {
   background-attachment: fixed;
 }
 
-#service h2 {
+.section-title{
   padding: 15px 0px 15px 12px;
   font-size: 1.2rem;
   font-weight: 600;
@@ -95,7 +95,31 @@ body {
   display: flex;
   justify-content: flex-start;
 }
-#service h2::before, #about-us h3::before {
+
+#service .card {
+  padding: 0px 10px;
+}
+
+.card-separator {
+  border-bottom: 1px dotted var(--blue-theme-color);
+}
+
+#service .card:hover {
+  background: var(--blue-theme-color);
+  color: #fff;
+}
+
+#service .card:hover .img-fluid {
+  -webkit-filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);
+}
+
+#service .card:hover .card-separator {
+  border-bottom: 1px dotted #fff;
+}
+
+
+#service h2::before, #about-us h3::before,#prev-contact h4::before, #blog h5::before, #staff h6:before {
   position: absolute;
   content: "";
   width: 4%;
@@ -104,7 +128,7 @@ body {
   margin-top: 25px;
 }
 
-#service h2::after, #about-us h3::after {
+#service h2::after, #about-us h3::after,#prev-contact h4::after ,#blog h5::after, #staff h6::after {
   position: absolute;
   content: "";
   height: 3px;
@@ -117,50 +141,32 @@ body {
   margin-top: 25px;
 }
 
-#about-us h3{
-  padding: 15px 0px 15px 12px;
-  font-size: 1.2rem;
-  font-weight: 600;
-  letter-spacing: 0.6px;
-  white-space: nowrap;
-  display: flex;
-  justify-content: flex-start;
+#about-us h3::before{
+  width: 7% !important;
 }
+
 
 #prev-contact{
   background-color: var(--blue-theme-color);
 }
 
 #prev-contact h4{
-  padding: 15px 0px 15px 12px;
   color: #fff;
-  font-size: 1.2rem;
-  font-weight: 600;
-  letter-spacing: 0.6px;
-  white-space: nowrap;
-  display: flex;
-  justify-content: flex-start;
+
 }
 #prev-contact h4::before{
-  position: absolute;
   content: "";
-  width: 4%;
-  height: 3px;
-  background: #fff;
-  margin-top: 25px;
+  width: 12% !important;
+  background: #fff !important;
+
 }
 
 #prev-contact h4::after{
-  position: absolute;
-  content: "";
   height: 3px;
   width: 5px;
   background: var(--blue-theme-color);
-  animation-name: LINE-MOVE;
-  animation-duration: 2s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  margin-top: 25px;
+  animation-name: LINE-MOVE-LONG;
+  
 }
 
 #email-title{
@@ -170,12 +176,100 @@ body {
   text-transform: uppercase;
 }
 
+#blog h5::before{
+  width: 12%;
+  
+}
+#blog h5::after{
+  animation-name: LINE-MOVE-LONG;
+  
+}
+
+.box-post{
+  width: 100%;
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.box-post:hover, #staff .card:hover{
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
+}
+
+#destaque{
+  padding: 64px 0px;
+}
+#destaque img{
+  width: 295px;
+  padding-left: 10px
+}
+
+#destaque-title{
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+#destaque-title small{
+  font-size: 0.8rem;
+  color: #999;
+  font-weight: 100 !important;
+  position: relative;
+  top: 15px;
+  right: 103px
+}
+
+#destaque button{
+  width: 120px;
+  margin-top: 15px ;
+}
+
+#staff h6:before {
+  width: 7%;
+}
+
+#staff .card{
+  padding: 0 10px;
+
+}
+
+.team-name{
+  font-weight: bold;
+}
+
+#final {
+
+  background-color: var(--blue-theme-color);
+  color: #fff;
+}
+
+#final .list-group-item{
+  background: var(--blue-theme-color);
+  color: #fff;
+ 
+}
+#final .list-group-item a{
+  color: #fff;
+  text-decoration: none;
+}
+#final .list-group-item a:hover{
+  font-weight: 600;
+}
+
 @keyframes LINE-MOVE {
   0% {
     transform: translateX(0);
   }
   to {
     transform: translateX(95px);
+  }
+}
+
+@keyframes LINE-MOVE-LONG {
+  0% {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(150px);
   }
 }
 
@@ -196,24 +290,3 @@ body {
   background: var(--blue-theme-color);
 }*/
 
-.card {
-  padding: 0px 10px;
-}
-
-.card-separator {
-  border-bottom: 1px dotted var(--blue-theme-color);
-}
-
-.card:hover {
-  background: var(--blue-theme-color);
-  color: #fff;
-}
-
-.card:hover .img-fluid {
-  -webkit-filter: brightness(0) invert(1);
-  filter: brightness(0) invert(1);
-}
-
-.card:hover .card-separator {
-  border-bottom: 1px dotted #fff;
-}
